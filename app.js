@@ -1,5 +1,5 @@
 var kafka = require('kafka-node'),
-    zkQuorum = process.env['ZK_QUORUM'],
+    zkQuorum = process.env['KAFKA_PORT_2181_TCP_ADDR'] + ':2181',
     HighLevelProducer = kafka.HighLevelProducer,
     HighLevelConsumer = kafka.HighLevelConsumer,
     client = new kafka.Client(zkQuorum, 'kafka-client'),
